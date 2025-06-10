@@ -4,7 +4,7 @@ import SplashCursor from './assets/SplashCursor'
 function App() {
   // Thêm state để quản lý ảnh profile
   const [profileImage, setProfileImage] = useState(
-    'https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID' // Thay bằng link ảnh của bạn
+    'https://i.pinimg.com/736x/f8/45/68/f8456800ac55a50acda33ea6b9267e54.jpg' // Thay bằng link ảnh của bạn
   )
   
   // Hàm xử lý khi người dùng upload ảnh mới
