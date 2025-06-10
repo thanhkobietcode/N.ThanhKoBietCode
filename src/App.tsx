@@ -27,7 +27,7 @@ function App() {
           <div className="profile-header">
             <div className="avatar">
               {avatarUrl ? (
-                <img src={https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfLsmIrnqT5k-3hHYYCBFfWviX_TcV0gFfsw&s} alt="Profile" className="avatar-img" />
+                <img src={} alt="Profile" className="avatar-img" />
               ) : (
                 '👨‍💻'
               )}
