@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css'
 import SplashCursor from './assets/SplashCursor'
 
@@ -33,24 +34,23 @@ function App() {
       <div className="container">
         <div className="profile-card">
           <div className="profile-header">
-            {/* Thay thế avatar emoji bằng ảnh profile */}
+            {/* Avatar container chỉ hiển thị ảnh và input upload ẩn */}
             <div className="avatar-container">
-              <img 
-                src={profileImage} 
-                alt="Profile" 
-                className="avatar-image"
-                onError={() => setProfileImage('https://via.placeholder.com/150')} // Fallback nếu ảnh lỗi
-              />
-              <label htmlFor="profile-upload" className="upload-label">
-                <i className="fas fa-camera"></i>
-                <input 
-                  id="profile-upload" 
-                  type="file" 
-                  accept="image/*" 
-                  onChange={handleImageUpload}
-                  style={{ display: 'none' }}
+              <label htmlFor="profile-upload" style={{ cursor: 'pointer' }}>
+                <img 
+                  src={profileImage} 
+                  alt="Profile" 
+                  className="avatar-image"
+                  onError={() => setProfileImage('https://via.placeholder.com/150')} // Fallback nếu ảnh lỗi
                 />
               </label>
+              <input 
+                id="profile-upload" 
+                type="file" 
+                accept="image/*" 
+                onChange={handleImageUpload}
+                style={{ display: 'none' }}
+              />
             </div>
             <h1 className="name">Hoàng Thái</h1>
             <p className="title">Full Stack Developer</p>
