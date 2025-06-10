@@ -52,7 +52,7 @@ function App() {
                 style={{ display: 'none' }}
               />
             </div>
-            <h1 className="name">Hoàng Thái</h1>
+            <h1 className="name">N.Thanh 🇻🇳</h1>
             <p className="title">Full Stack Developer</p>
             <p className="description">
               Passionate developer with 5+ years of experience creating innovative web applications. 
