@@ -2,10 +2,28 @@ import './App.css'
 import SplashCursor from './assets/SplashCursor'
 
 function App() {
+  // Thêm state để quản lý ảnh profile
+  const [profileImage, setProfileImage] = useState(
+    'https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID' // Thay bằng link ảnh của bạn
+  )
+  
+  // Hàm xử lý khi người dùng upload ảnh mới
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (file) {
+      const reader = new FileReader()
+      reader.onload = (event) => {
+        if (event.target?.result) {
+          setProfileImage(event.target.result as string)
+        }
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+
   return (
     <>
       <SplashCursor />
-      {/* Sửa lỗi lệch layout do canvas full width gây ra thanh cuộn ngang */}
       <div className="floating-shapes" style={{ zIndex: 1, pointerEvents: 'none' }}>
         <div className="shape"></div>
         <div className="shape"></div>
@@ -15,7 +33,25 @@ function App() {
       <div className="container">
         <div className="profile-card">
           <div className="profile-header">
-            <div className="avatar">👨‍💻</div>
+            {/* Thay thế avatar emoji bằng ảnh profile */}
+            <div className="avatar-container">
+              <img 
+                src={profileImage} 
+                alt="Profile" 
+                className="avatar-image"
+                onError={() => setProfileImage('https://via.placeholder.com/150')} // Fallback nếu ảnh lỗi
+              />
+              <label htmlFor="profile-upload" className="upload-label">
+                <i className="fas fa-camera"></i>
+                <input 
+                  id="profile-upload" 
+                  type="file" 
+                  accept="image/*" 
+                  onChange={handleImageUpload}
+                  style={{ display: 'none' }}
+                />
+              </label>
+            </div>
             <h1 className="name">Hoàng Thái</h1>
             <p className="title">Full Stack Developer</p>
             <p className="description">
