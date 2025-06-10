@@ -52,16 +52,15 @@ function App() {
                 style={{ display: 'none' }}
               />
             </div>
-            <h1 className="name">N.Thanh 🇻🇳</h1>
-            <p className="title">Full Stack Developer</p>
+            <h1 className="name">N.Thanh</h1>
+            <p className="title">I design websites and capture life through my lensr</p>
             <p className="description">
-              Passionate developer with 5+ years of experience creating innovative web applications. 
-              I love turning complex problems into simple, beautiful solutions that make a difference.
+             I'm a creative person - a dreamer with a passion for minimalistic yet stylish web interfaces. When I am not immersed in lines of code, I often wander with my camera to capture everyday moments, or immerse myself in familiar melodies in my free time.
             </p>
           </div>
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number">50+</div>
+              <div className="stat-number">80+</div>
               <div className="stat-label">Projects</div>
             </div>
             <div className="stat-card">
@@ -117,10 +116,10 @@ function App() {
           <div className="contact-section">
             <h2 className="section-title">Let's Connect</h2>
             <div className="contact-buttons">
-              <a href="mailto:duonghoangthai61@gmail.com" className="contact-btn primary">Contact Me</a>
+              <a href="mailto:lunhatthanh259@gmail.com" className="contact-btn primary">Contact Me</a>
               <a href="#" className="contact-btn secondary">Download CV</a>
-              <a href="https://github.com/hoanGtHaiVip" className="contact-btn secondary">GitHub</a>
-              <a href="https://linkedin.com" className="contact-btn secondary">LinkedIn</a>
+              <a href="https://github.com/thanhkobietcode" className="contact-btn secondary">GitHub</a>
+              <a href="https://www.facebook.com/s.DesignxPts" className="contact-btn secondary">Facebook</a>
             </div>
           </div>
         </div>
